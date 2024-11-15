@@ -1,0 +1,19 @@
+services:
+  app:
+    build:
+      context: .
+    image: preciouspreemies
+    ports:
+      - '3001:3001'
+    environment:
+      NODE_ENV: development
+    develop:
+      watch:
+        - path: ./src
+          action: sync
+          target: /app/src
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: package.json
+
