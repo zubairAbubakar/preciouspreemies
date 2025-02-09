@@ -7,6 +7,7 @@ import Billboard from "@/components/billboard";
 import Filter from "./components/filter";
 import NoResults from "@/components/ui/noResults";
 import ProductCard from "@/components/ui/ProductCard";
+import MobileFilter from "./components/mobile-filter";
 
 interface CategoryPageProps {
   params: {
@@ -39,6 +40,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
         <div className="p-4 sm:px-6 lg:px-8 pb-24">
           <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
             {/* Add mobile sidebar */}
+            <MobileFilter sizes={sizes} colors={colors} />
             <div className="hidden lg:block">
               <Filter data={sizes} name="Size" valueKey="sizeId" />
               <Filter data={colors} name="Color" valueKey="colorId" />
