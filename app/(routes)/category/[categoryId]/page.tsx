@@ -40,8 +40,8 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
           <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
             {/* Add mobile sidebar */}
             <div className="hidden lg:block">
-              <Filter product={sizes} name="Size" valueKey="sizeId" />
-              <Filter product={colors} name="Color" valueKey="colorId" />
+              <Filter data={sizes} name="Size" valueKey="sizeId" />
+              <Filter data={colors} name="Color" valueKey="colorId" />
             </div>
             <div className="mt-6 lg:col-span-4 lg:mt-0">
               {products.length === 0 && <NoResults />}
